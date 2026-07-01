@@ -1,61 +1,256 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 📰 GhNews - Neubrutalism News Platform
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+GhNews adalah sebuah platform portal berita berbasis **Laravel** yang mengusung gaya desain **Neubrutalism (Neo-Brutalism)**. Dibuat dengan antarmuka yang agresif, mencolok, tebal, dan memiliki kontras tinggi, website ini memberikan pengalaman membaca berita yang *anti-mainstream* dipadukan dengan fitur-fitur dinamis.
 
-## About Laravel
+---
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## ✨ Fitur Utama
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### 🎨 Desain Murni Neubrutalism
+- **Hard Shadows & Thick Borders:** Menggunakan bayangan solid tanpa *blur* dan garis tepi yang sangat tebal (khas retro/komik).
+- **High Contrast Colors:** Palet warna *eye-catching* seperti Hijau Neon, Kuning, Biru Cerah, dan Pink.
+- **Dark & Light Mode:** Terintegrasi penuh dengan pergantian mode gelap/terang tanpa merusak komposisi warna brutalism.
+- **Hover Animations:** Efek 3D fisik saat tombol atau *card* ditekan (translasi sumbu X & Y).
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### 📝 Manajemen Konten Dinamis
+- Artikel berita menggunakan tipe data **JSON** sehingga admin dapat menambahkan atau menghapus paragraf secara dinamis.
+- Sistem secara otomatis mengambil paragraf pertama sebagai cuplikan (*excerpt*).
 
-## Learning Laravel
+### 🎵 Floating Retro Music Player
+- Pemutar musik mengambang di sudut halaman.
+- Mendukung file MP3 lokal dari perangkat pengguna.
+- Musik akan tetap berjalan karena berita dibuka pada tab baru (`target="_blank"`).
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+---
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## 🛠️ Teknologi yang Digunakan
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+| Teknologi | Keterangan |
+|-----------|------------|
+| Laravel | Backend Framework |
+| PHP | Bahasa Pemrograman |
+| Blade | Template Engine |
+| Tailwind CSS | Styling |
+| JavaScript | Interaktivitas |
+| MySQL / MariaDB | Database |
+| Vite | Asset Bundler |
 
-## Laravel Sponsors
+---
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+# ⚙️ Panduan Instalasi
 
-### Premium Partners
+## 1. Persyaratan Sistem
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+Pastikan perangkat telah terpasang:
 
-## Contributing
+- PHP >= 8.1
+- Composer
+- Node.js & NPM
+- MySQL / MariaDB
+- Git
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+---
 
-## Code of Conduct
+## 2. Clone Repository
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+```bash
+git clone https://github.com/username-github-anda/ghnews.git
+cd ghnews
+```
 
-## Security Vulnerabilities
+---
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## 3. Install Dependency
 
-## License
+Install dependency PHP dan Node.js.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+```bash
+composer install
+npm install
+```
+
+---
+
+## 4. Konfigurasi Environment
+
+Salin file `.env.example` menjadi `.env`.
+
+```bash
+cp .env.example .env
+```
+
+Untuk Windows CMD:
+
+```cmd
+copy .env.example .env
+```
+
+Lalu generate application key.
+
+```bash
+php artisan key:generate
+```
+
+---
+
+## 5. Konfigurasi Database
+
+Buat database baru di MySQL, misalnya:
+
+```
+ghnews
+```
+
+Kemudian buka file **.env** dan ubah konfigurasi berikut.
+
+```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=
+DB_USERNAME=
+DB_PASSWORD=
+```
+
+Sesuaikan username dan password dengan konfigurasi MySQL Anda.
+
+---
+
+## 6. Jalankan Migration
+
+```bash
+php artisan migrate
+```
+
+Jika project memiliki seeder:
+
+```bash
+php artisan db:seed
+```
+
+---
+
+## 7. Compile Asset
+
+Untuk development:
+
+```bash
+npm run dev
+```
+
+Untuk production:
+
+```bash
+npm run build
+```
+
+---
+
+## 8. Menjalankan Server
+
+```bash
+php artisan serve
+```
+
+Kemudian buka browser.
+
+```
+http://127.0.0.1:8000
+```
+
+---
+
+# 📂 Struktur Folder
+
+```
+ghnews/
+│
+├── app/
+│   ├── Http/
+│   │   ├── Controllers/
+│   │   └── Middleware/
+│   ├── Models/
+│   └── Providers/
+│
+├── bootstrap/
+│
+├── config/
+│
+├── database/
+│   ├── factories/
+│   ├── migrations/
+│   └── seeders/
+│
+├── public/
+│
+├── resources/
+│   ├── css/
+│   ├── js/
+│   └── views/
+│       ├── layoutAdmin/
+│       ├── layoutAuth/
+│       ├── layout/
+│       ├── admin/
+│       └── user/
+│
+├── routes/
+│   ├── console.php
+│   └── web.php
+│
+├── storage/
+│
+├── tests/
+│
+├── vendor/
+│
+├── .env
+├── artisan
+├── composer.json
+├── package.json
+└── vite.config.js
+```
+
+---
+
+# 🚀 Cara Penggunaan
+
+1. Jalankan server Laravel.
+
+```bash
+php artisan serve
+```
+
+2. Jalankan Vite.
+
+```bash
+npm run dev
+```
+
+3. Buka browser.
+
+```
+http://127.0.0.1:8000
+```
+
+4. Login sebagai admin untuk mengelola berita.
+
+5. Tambahkan berita beserta paragraf dinamis.
+
+6. Pengunjung dapat membaca berita dan menggunakan floating music player.
+
+---
+
+# 📸 Preview
+
+Tambahkan screenshot aplikasi pada bagian ini.
+
+```
+assets/
+├── homepage.png
+├── article.png
+└── dashboard.png
+
+```
+# 📄 Lisensi
+
+Project ini menggunakan lisensi **MIT License** sehingga bebas digunakan, dimodifikasi, dan dikembangkan sesuai kebutuhan.
