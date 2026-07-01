@@ -239,18 +239,3 @@ http://127.0.0.1:8000
 6. Pengunjung dapat membaca berita dan menggunakan floating music player.
 
 ---
-
-# 📸 Preview
-
-Tambahkan screenshot aplikasi pada bagian ini.
-
-```
-assets/
-├── homepage.png
-├── article.png
-└── dashboard.png
-
-```
-# 📄 Lisensi
-
-Project ini menggunakan lisensi **MIT License** sehingga bebas digunakan, dimodifikasi, dan dikembangkan sesuai kebutuhan.
